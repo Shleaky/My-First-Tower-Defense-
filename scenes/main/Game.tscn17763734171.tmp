@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl8rwhb22entk"]
+
+[ext_resource type="Script" uid="uid://c8iccxepbn8n2" path="res://scripts/core/GameController.gd" id="1_s3ho0"]
+[ext_resource type="Script" uid="uid://clbdppcyo31q3" path="res://scripts/ui/UIManager.gd" id="2_migvx"]
+[ext_resource type="Script" uid="uid://cga6ktuqyd8nk" path="res://scripts/gameplay/EnemySpawner.gd" id="3_v5p7v"]
+[ext_resource type="Script" uid="uid://c1b2hthys2jpl" path="res://scripts/gameplay/Base.gd" id="4_8bvh6"]
+[ext_resource type="Script" uid="uid://dn33dk8o43s7i" path="res://scripts/core/PauseMenu.gd" id="5_xye8g"]
+[ext_resource type="Script" uid="uid://hfl1kequiwo8" path="res://scripts/core/LeaderboardUploader.gd" id="6_anm5x"]
+[ext_resource type="Script" uid="uid://4ew5mwopcufy" path="res://scripts/gameplay/TowerSlot.gd" id="7_vs3mj"]
+[ext_resource type="Script" uid="uid://cyhhmp60vvu18" path="res://scripts/gameplay/TowerManager.gd" id="8_migvx"]
+
+[node name="Game" type="Node2D"]
+
+[node name="GameController" type="Node2D" parent="."]
+script = ExtResource("1_s3ho0")
+
+[node name="UIManager" type="CanvasLayer" parent="."]
+script = ExtResource("2_migvx")
+
+[node name="ScoreLabel" type="Label" parent="UIManager"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="EnemySpawner" type="Node" parent="."]
+script = ExtResource("3_v5p7v")
+metadata/_custom_type_script = "uid://cga6ktuqyd8nk"
+
+[node name="Base" type="Node2D" parent="."]
+script = ExtResource("4_8bvh6")
+
+[node name="PauseMenu" type="Control" parent="."]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("5_xye8g")
+
+[node name="LeaderboardUploader" type="Node" parent="."]
+script = ExtResource("6_anm5x")
+metadata/_custom_type_script = "uid://hfl1kequiwo8"
+
+[node name="TowerSlot" type="Area2D" parent="."]
+script = ExtResource("7_vs3mj")
+
+[node name="TowerManager" type="Node" parent="."]
+script = ExtResource("8_migvx")
+metadata/_custom_type_script = "uid://cyhhmp60vvu18"

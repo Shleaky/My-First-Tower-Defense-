@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c78kiv1vjy324"]
+
+[ext_resource type="Script" uid="uid://hfl1kequiwo8" path="res://scripts/core/LeaderboardUploader.gd" id="1_8ckyx"]
+
+[node name="LeaderboardUploader" type="Node"]
+script = ExtResource("1_8ckyx")
+metadata/_custom_type_script = "uid://hfl1kequiwo8"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

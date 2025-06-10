@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ejnnopv4dmv"]
+
+[ext_resource type="Script" uid="uid://cyhhmp60vvu18" path="res://scripts/gameplay/TowerManager.gd" id="1_c4v8c"]
+[ext_resource type="Script" uid="uid://4ew5mwopcufy" path="res://scripts/gameplay/TowerSlot.gd" id="2_sqbsl"]
+
+[node name="TowerManager" type="Node"]
+script = ExtResource("1_c4v8c")
+
+[node name="TowerSlotContainer" type="Node" parent="."]
+
+[node name="TowerSlot" type="Area2D" parent="TowerSlotContainer"]
+script = ExtResource("2_sqbsl")
+metadata/_custom_type_script = "uid://4ew5mwopcufy"

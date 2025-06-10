@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf2loribfo8wt"]
+
+[ext_resource type="Script" uid="uid://4ew5mwopcufy" path="res://scripts/gameplay/TowerSlot.gd" id="1_fgwun"]
+
+[node name="TowerSlot" type="Area2D"]
+script = ExtResource("1_fgwun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HighlightSprite" type="Sprite2D" parent="."]

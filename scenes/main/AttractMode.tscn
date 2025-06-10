@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0skbnug36nda"]
+
+[ext_resource type="Script" uid="uid://cs3tthg1lf6kt" path="res://scripts/core/AttractMode.gd" id="1_2uj5a"]
+
+[node name="AttractMode_tscn" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2uj5a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PressEnterLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

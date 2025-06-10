@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdh6oyii4h1r7"]
+
+[ext_resource type="Script" uid="uid://jfeayqh1tx7h" path="res://scripts/gameplay/Enemy.gd" id="1_dcyf1"]
+[ext_resource type="Texture2D" uid="uid://dhxff2bj4jp31" path="res://assets/sprites/enemySprite.png" id="2_jp7gb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jp7gb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_onn1m"]
+
+[sub_resource type="Gradient" id="Gradient_v61ah"]
+offsets = PackedFloat32Array(0, 0.0140845, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.725947, 0.122835, 0.213461, 1, 0, 0.626134, 0.296867, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lgjj6"]
+gradient = SubResource("Gradient_v61ah")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jp7gb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_klu2b"]
+
+[node name="Enemy" type="Area2D"]
+disable_mode = 1
+script = ExtResource("1_dcyf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jp7gb")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+texture_under = SubResource("PlaceholderTexture2D_jp7gb")
+texture_over = SubResource("PlaceholderTexture2D_onn1m")
+texture_progress = SubResource("GradientTexture2D_lgjj6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jp7gb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_klu2b")

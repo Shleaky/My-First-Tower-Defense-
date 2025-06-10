@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbxj7deili3lx"]
+
+[ext_resource type="Script" uid="uid://jfeayqh1tx7h" path="res://scripts/gameplay/Enemy.gd" id="1_pe43a"]
+
+[node name="Enemy" type="Area2D"]
+position = Vector2(73, 91)
+script = ExtResource("1_pe43a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
